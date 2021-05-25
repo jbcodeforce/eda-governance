@@ -1,0 +1,198 @@
+{
+    "entityDefs": [
+        {
+            "category": "ENTITY",
+            "version": 3,
+            "name": "eda_kafka_topic",
+            "description": "kafka_topic",
+            "typeVersion": "2.7",
+            "serviceType": "kafka",
+            "superTypes": [
+                "DataSet"
+            ],
+            "attributeDefs": [
+                {
+                    "name": "name",
+                    "typeName": "string",
+                    "isOptional": false,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 1,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": true,
+                    "includeInNotification": false,
+                    "searchWeight": 10
+                },
+                {
+                    "name": "owner",
+                    "typeName": "string",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 1,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false,
+                    "searchWeight": 8
+                },
+                {
+                    "name": "owner.lob",
+                    "typeName": "string",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false,
+                    "searchWeight": 8
+                },
+                {
+                    "name": "cleanup.policy",
+                    "typeName": "string",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false,
+                    "searchWeight": -1
+                },
+                {
+                    "name": "replication.factor",
+                    "typeName": "int",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false,
+                    "searchWeight": -1
+                },
+                {
+                    "name": "partitions",
+                    "typeName": "int",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false,
+                    "searchWeight": -1
+                },
+                {
+                    "name": "retention.bytes",
+                    "typeName": "long",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false,
+                    "searchWeight": -1
+                },
+                {
+                    "name": "retention.ms",
+                    "typeName": "long",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false,
+                    "searchWeight": -1
+                },
+                {
+                    "name": "delete.retention.ms",
+                    "typeName": "long",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false,
+                    "searchWeight": -1
+                },
+                {
+                    "name": "min.insync.replicas",
+                    "typeName": "int",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false,
+                    "searchWeight": -1
+                },
+                
+                {
+                    "name": "segment.bytes",
+                    "typeName": "long",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false,
+                    "searchWeight": -1
+                },
+                {
+                    "name": "number.events.day",
+                    "typeName": "long",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false,
+                    "searchWeight": -1
+                },
+                {
+                    "name": "max.throughput.ms",
+                    "typeName": "long",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false,
+                    "searchWeight": -1
+                },
+                {
+                    "name": "max.message.bytes",
+                    "typeName": "int",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false,
+                    "searchWeight": -1
+                },
+                {
+                    "name": "owner.cluster.references",
+                    "typeName": "array<eda_kafka_cluster>",
+                    "isOptional": true,
+                    "cardinality": "SET",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 10,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false
+                }
+                
+            ]
+        }
+    ]
+}

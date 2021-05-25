@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  atlas:
+    container_name: atlas
+    hostname: atlas
+    image: sburn/apache-atlas
+    ports:
+      - 21000:21000 
+      - 21443:21443
+    environment:
+      MANAGE_LOCAL_HBASE: "true"
+      MANAGE_LOCAL_SOLR: "false"
+    command:
+      /opt/apache-atlas-2.1.0/bin/atlas_start.py
+    volumes:
+      - $PWD/environment/atlas/data:/tmp/data/

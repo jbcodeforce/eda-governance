@@ -1,0 +1,58 @@
+{
+  "entities": [
+    {
+      "typeName": "eda_kafka_broker",
+      "createdBy": "maas_service",
+      "attributes": {
+        "qualifiedName": "lab-kafka-kafka-0",
+        "broker.id": "0",
+        "owner.cluster.ref": "lab-kafka"
+      }
+    },
+    {
+        "typeName": "eda_kafka_broker",
+        "createdBy": "maas_service",
+        "attributes": {
+          "qualifiedName": "lab-kafka-kafka-1",
+          "broker.id": "1",
+          "owner.cluster.ref": "lab-kafka"
+        }
+      },
+      {
+        "typeName": "eda_kafka_broker",
+        "createdBy": "maas_service",
+        "attributes": {
+          "qualifiedName": "lab-kafka-kafka-2",
+          "broker.id": "2",
+          "owner.cluster.ref": "lab-kafka"
+        }
+      },
+      {
+        "typeName": "eda_kafka_broker",
+        "createdBy": "maas_service",
+        "attributes": {
+          "qualifiedName": "eda-dev-kafka-0",
+          "broker.id": "0",
+          "owner.cluster.ref": "eda-dev"
+        }
+      },
+      {
+        "typeName": "eda_kafka_broker",
+        "createdBy": "maas_service",
+        "attributes": {
+          "qualifiedName": "eda-dev-kafka-1",
+          "broker.id": "1",
+          "owner.cluster.ref": "eda-dev"
+        }
+      },
+      {
+        "typeName": "eda_kafka_broker",
+        "createdBy": "maas_service",
+        "attributes": {
+          "qualifiedName": "eda-dev-kafka-2",
+          "broker.id": "2",
+          "owner.cluster.ref": "eda-dev"
+        }
+      }
+  ]
+}

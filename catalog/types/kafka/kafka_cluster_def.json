@@ -1,0 +1,166 @@
+{
+  "entityDefs": [
+    {
+      "superTypes": [
+        "Infrastructure"
+      ],
+      "category": "ENTITY",
+      "name": "eda_kafka_cluster",
+      "description": "a Kafka Cluster groups multiple Kafka Brokers and manage topics",
+      "typeVersion": "1.0",
+      "attributeDefs": [
+        {
+          "name": "cluster.name",
+          "typeName": "string",
+          "isOptional": false,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 1,
+          "valuesMaxCount": 1,
+          "isUnique": true,
+          "isIndexable": true
+        },
+        {
+          "name": "cluster.id",
+          "typeName": "string",
+          "isOptional": false,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 0,
+          "valuesMaxCount": 1,
+          "isUnique": true,
+          "isIndexable": false
+        },
+        {
+          "name": "cluster.type",
+          "typeName": "string",
+          "isOptional": true,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 0,
+          "valuesMaxCount": 1,
+          "isUnique": false,
+          "isIndexable": false
+        },
+        {
+          "name": "cluster.purpose",
+          "typeName": "string",
+          "isOptional": true,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 0,
+          "valuesMaxCount": 1,
+          "isUnique": false,
+          "isIndexable": false
+        },
+        {
+          "name": "cluster.deployment.type",
+          "typeName": "string",
+          "isOptional": true,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 0,
+          "valuesMaxCount": 1,
+          "isUnique": false,
+          "isIndexable": false
+        },
+        {
+          "name": "cluster.deployment.environment",
+          "typeName": "string",
+          "isOptional": true,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 0,
+          "valuesMaxCount": 1,
+          "isUnique": false,
+          "isIndexable": false
+        },
+        
+        {
+          "name": "bootstrap.server.internal",
+          "typeName": "string",
+          "isOptional": false,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 0,
+          "valuesMaxCount": 1,
+          "isUnique": false,
+          "isIndexable": false
+        },
+        {
+          "name": "bootstrap.server.external",
+          "typeName": "string",
+          "isOptional": false,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 0,
+          "valuesMaxCount": 1,
+          "isUnique": false,
+          "isIndexable": false
+        },
+        {
+          "name": "admin.ui",
+          "typeName": "string",
+          "isOptional": false,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 0,
+          "valuesMaxCount": 1,
+          "isUnique": false,
+          "isIndexable": false
+        },
+        {
+          "name": "replicas",
+          "typeName": "int",
+          "isOptional": false,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 0,
+          "valuesMaxCount": 1,
+          "isUnique": false,
+          "isIndexable": false
+        },
+        {
+          "name": "kafka.version",
+          "typeName": "string",
+          "isOptional": true,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 0,
+          "valuesMaxCount": 1,
+          "isUnique": false,
+          "isIndexable": false
+        },
+        {
+          "name": "owner",
+          "typeName": "string",
+          "isOptional": true,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 0,
+          "valuesMaxCount": 1,
+          "isUnique": true,
+          "isIndexable": true
+        },
+        {
+          "name": "external.authentication.type",
+          "typeName": "string",
+          "isOptional": true,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 0,
+          "valuesMaxCount": 1,
+          "isUnique": false,
+          "isIndexable": false
+        },
+        {
+          "name": "internal.authentication.type",
+          "typeName": "string",
+          "isOptional": true,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 0,
+          "valuesMaxCount": 1,
+          "isUnique": false,
+          "isIndexable": false
+        },
+        {
+          "name": "authorization.type",
+          "typeName": "string",
+          "isOptional": true,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 0,
+          "valuesMaxCount": 1,
+          "isUnique": false,
+          "isIndexable": false
+        }
+      ]
+    }
+  ]
+}
