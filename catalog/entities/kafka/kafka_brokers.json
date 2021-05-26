@@ -4,54 +4,56 @@
       "typeName": "eda_kafka_broker",
       "createdBy": "maas_service",
       "attributes": {
-        "qualifiedName": "lab-kafka-kafka-0",
         "broker.id": "0",
-        "owner.cluster.ref": "lab-kafka"
+        "qualifiedName": "lab-kafka-kafka-0@lab-kafka",
+        "name": "lab-kafka-kafka-0",
+        "hostname": "lab-kafka-kafka-1"
       }
     },
     {
         "typeName": "eda_kafka_broker",
         "createdBy": "maas_service",
         "attributes": {
-          "qualifiedName": "lab-kafka-kafka-1",
           "broker.id": "1",
-          "owner.cluster.ref": "lab-kafka"
+          "qualifiedName": "lab-kafka-kafka-1@lab-kafka",
+          "name": "lab-kafka-kafka-1",
+          "hostname": "lab-kafka-kafka-1"
         }
       },
       {
         "typeName": "eda_kafka_broker",
-        "createdBy": "maas_service",
         "attributes": {
-          "qualifiedName": "lab-kafka-kafka-2",
           "broker.id": "2",
-          "owner.cluster.ref": "lab-kafka"
+          "qualifiedName": "lab-kafka-kafka-2@lab-kafka",
+          "name": "lab-kafka-kafka-2",
+          "hostname": "lab-kafka-kafka-2"
         }
       },
       {
         "typeName": "eda_kafka_broker",
-        "createdBy": "maas_service",
         "attributes": {
-          "qualifiedName": "eda-dev-kafka-0",
           "broker.id": "0",
-          "owner.cluster.ref": "eda-dev"
+          "name": "eda-dev-kafka-0",
+          "qualifiedName": "eda-dev-kafka-0@eda-dev",
+          "hostname": "eda-dev-kafka-0"
         }
       },
       {
         "typeName": "eda_kafka_broker",
-        "createdBy": "maas_service",
         "attributes": {
-          "qualifiedName": "eda-dev-kafka-1",
           "broker.id": "1",
-          "owner.cluster.ref": "eda-dev"
+          "name": "eda-dev-kafka-1",
+          "qualifiedName": "eda-dev-kafka-1@eda-dev",
+          "hostname": "eda-dev-kafka-1"
         }
       },
       {
         "typeName": "eda_kafka_broker",
-        "createdBy": "maas_service",
         "attributes": {
-          "qualifiedName": "eda-dev-kafka-2",
           "broker.id": "2",
-          "owner.cluster.ref": "eda-dev"
+          "name": "eda-dev-kafka-2",
+          "qualifiedName": "eda-dev-kafka-2@eda-dev",
+          "hostname": "eda-dev-kafka-2"
         }
       }
   ]

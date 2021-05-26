@@ -13,4 +13,4 @@ services:
     command:
       /opt/apache-atlas-2.1.0/bin/atlas_start.py
     volumes:
-      - $PWD/environment/atlas/data:/tmp/data/
+      - $PWD/atlas/data:/tmp/data/

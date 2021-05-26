@@ -1,0 +1,64 @@
+{
+    "entities": [
+      {
+        "typeName": "eda_kafka_topic",
+        "createdBy": "maas_service",
+        "attributes": {
+          "qualifiedName": "items@eda-dev",
+          "description": "Input topic for items sold in store",
+          "name": "items",
+          "owner": "Roger Rabbit",
+          "owner.lob": "Inventory-monitoring",
+          "cluster": {"uniqueAttributes": {"qualifiedName": "eda-dev"}, "typeName": "eda_kafka_cluster"},
+          "clusterQualifiedName": "eda-dev",
+          "cleanup.policy": "delete",
+          "replication.factor": 3,
+          "min.insync.replicas": 2,
+          "partitions": 3,
+          "retention.bytes": -1,
+          "retention.ms": 604800000,
+          "segment.bytes": 1073741824
+        }
+      },
+      {
+        "typeName": "eda_kafka_topic",
+        "createdBy": "maas_service",
+        "attributes": {
+          "qualifiedName": "store.inventory@eda-dev",
+          "description": "topic for items sold in store",
+          "name": "store.inventory",
+          "cluster": {"uniqueAttributes": {"qualifiedName": "eda-dev"}, "typeName": "eda_kafka_cluster"},
+          "clusterQualifiedName": "eda-dev",
+          "owner": "Roger Rabbit",
+          "owner.lob": "Inventory-monitoring",
+          "cleanup.policy": "delete",
+          "replication.factor": 3,
+          "min.insync.replicas": 2,
+          "partitions": 1,
+          "retention.bytes": -1,
+          "retention.ms": 604800000,
+          "segment.bytes": 1073741824
+        }
+      },
+      {
+        "typeName": "eda_kafka_topic",
+        "createdBy": "maas_service",
+        "attributes": {
+          "qualifiedName": "item.inventory@eda-dev",
+          "description": "topic for items sold globally",
+          "name": "item.inventory",
+          "owner": "Roger Rabbit",
+          "owner.lob": "Inventory-monitoring",
+          "cluster": {"uniqueAttributes": {"qualifiedName": "eda-dev"}, "typeName": "eda_kafka_cluster"},
+          "clusterQualifiedName": "eda-dev",
+          "cleanup.policy": "delete",
+          "replication.factor": 3,
+          "min.insync.replicas": 2,
+          "partitions": 1,
+          "retention.bytes": -1,
+          "retention.ms": 604800000,
+          "segment.bytes": 1073741824
+        }
+      }
+    ]
+}

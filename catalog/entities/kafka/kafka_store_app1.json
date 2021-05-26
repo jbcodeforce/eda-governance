@@ -1,0 +1,48 @@
+{
+  "entities": [
+    {
+      "typeName": "eda_kafka_app",
+      "createdBy": "maas_service",
+      "attributes": {
+        "qualifiedName": "refarch-eda-store-inventory@mysandbox",
+        "description": "Store inventory",
+        "name": "refarch-eda-store-inventory",
+        "owner": "Roger Rabbit",
+        "owner.lob": "Inventory-monitoring",
+        "deployed_cluster": "mysandbox@dooku.coc-ibm.com",
+        "deployment.type": "container",
+        "kafka.app.type": "kafka_streams",
+        "inputs": [
+          {
+            "uniqueAttributes": {
+              "qualifiedName": "items@eda-dev"
+            },
+            "typeName": "eda_kafka_topic"
+          }
+        ],
+        "outputs": [
+          {
+            "uniqueAttributes": {
+              "qualifiedName": "store.inventory@eda-dev"
+            },
+            "typeName": "eda_kafka_topic"
+          }
+        ],
+        "topics": [
+          {
+            "uniqueAttributes": {
+              "qualifiedName": "items@eda-dev"
+            },
+            "typeName": "eda_kafka_topic"
+          },
+          {
+            "uniqueAttributes": {
+              "qualifiedName": "store.inventory@eda-dev"
+            },
+            "typeName": "eda_kafka_topic"
+          }
+        ]
+      }
+    }
+  ]
+}

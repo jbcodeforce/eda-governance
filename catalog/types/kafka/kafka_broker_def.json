@@ -8,6 +8,7 @@
       "name": "eda_kafka_broker",
       "description": "a Kafka broker configuration",
       "typeVersion": "1.0",
+      "serviceType": "kafka",
       "attributeDefs": [
         {
           "name": "broker.id",
@@ -20,9 +21,9 @@
           "isIndexable": false
         },
         {
-          "name": "owner.cluster.ref",
+          "name": "hostname",
           "typeName": "string",
-          "isOptional": false,
+          "isOptional": true,
           "cardinality": "SINGLE",
           "valuesMinCount": 1,
           "valuesMaxCount": 1,

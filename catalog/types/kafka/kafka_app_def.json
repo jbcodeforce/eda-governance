@@ -2,10 +2,9 @@
     "entityDefs": [
         {
             "category": "ENTITY",
-            "version": 3,
-            "name": "eda_kafka_apps",
+            "name": "eda_kafka_app",
             "description": "Application producer or consumer, kafka streams...",
-            "typeVersion": "2.7",
+            "typeVersion": "1.0",
             "serviceType": "kafka",
             "superTypes": [
                 "Process"
@@ -48,10 +47,10 @@
                     "searchWeight": 8
                 },
                 {
-                    "name": "cluster.references",
-                    "typeName": "array<eda_kafka_cluster>",
-                    "isOptional": true,
-                    "cardinality": "SET",
+                    "name": "deployed_cluster",
+                    "typeName": "string",
+                    "isOptional": false,
+                    "cardinality": "SINGLE",
                     "valuesMinCount": 0,
                     "valuesMaxCount": 10,
                     "isUnique": false,
@@ -95,17 +94,18 @@
                     "searchWeight": 8
                 },
                 {
-                    "name": "deployment.clusters",
-                    "typeName": "array<Process>",
+                    "name": "topics",
+                    "typeName": "array<eda_kafka_topic>",
                     "isOptional": true,
                     "cardinality": "SET",
-                    "valuesMinCount": 0,
-                    "valuesMaxCount": 1000,
+                    "valuesMinCount": 1,
+                    "valuesMaxCount": 20,
                     "isUnique": false,
                     "isIndexable": false,
-                    "includeInNotification": false
+                    "includeInNotification": false,
+                    "searchWeight": -1,
+                    "relationshipTypeName": "eda_kafka_topic"
                 }
-                
             ]
         }
     ]

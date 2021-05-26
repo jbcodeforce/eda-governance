@@ -1,0 +1,35 @@
+{
+  "entities": [
+    {
+      "typeName": "eda_kafka_cluster",
+      "createdBy": "maas_service",
+      "attributes": {
+        "qualifiedName": "eda-dev",
+        "name": "eda-dev",
+        "userDescription": "EDA team's event streams 2020 cluster",
+        "cluster.id": "334cd9e8-f7e5-47d9-88e4-22e313cc6fbc",
+        "cluster.type": "event-streams-2020",
+        "cluster.purpose": "Run demo for EDA reference architecture assets",
+        "cluster.deployment.type": "OpenShift",
+        "cluster.deployment.environment": "ibm-cloud-roks",
+        "kafka.version": "2.6.0",
+        "owner": "Technical Go To Market",
+        "external.authentication.type": "scram-sha-512",
+        "internal.authentication.type": "tls",
+        "authorization.type": "runas",
+        "bootstrap.server.internal": "eda-dev-kafka-bootstrap.eventstreams.svc:9093",
+        "bootstrap.server.external": "eda-dev-kafka-bootstrap-eventstreams.assets-arch-eda-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-east.containers.appdomain.cloud:443",
+        "replicas": 3,
+        "admin.ui": "https://eda-dev-ibm-es-ui-eventstreams.assets-arch-eda-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-east.containers.appdomain.cloud",
+        "brokers": [
+          {"uniqueAttributes": {"qualifiedName": "eda-dev-kafka-0@eda-dev"}, 
+          "typeName": "eda_kafka_broker"},
+          {"uniqueAttributes": {"qualifiedName": "eda-dev-kafka-1@eda-dev"}, 
+          "typeName": "eda_kafka_broker"},
+          {"uniqueAttributes": {"qualifiedName": "eda-dev-kafka-2@eda-dev"}, 
+          "typeName": "eda_kafka_broker"}
+        ]
+      }
+    }
+  ]
+}

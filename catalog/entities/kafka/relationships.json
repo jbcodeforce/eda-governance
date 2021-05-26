@@ -1,0 +1,14 @@
+{
+    "end1": {
+        "typeName": "eda_kafka_cluster",
+        "uniqueAttributes": {
+            "qualifiedName": "eda-dev"
+        }
+    },
+    "end2": {
+        "typeName": "eda_kafka_broker",
+        "uniqueAttributes": {
+            "qualifiedName": "eda-dev-kafka-0@eda-dev"
+        }
+    }
+}

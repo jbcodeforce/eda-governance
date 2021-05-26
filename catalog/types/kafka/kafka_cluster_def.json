@@ -8,21 +8,12 @@
       "name": "eda_kafka_cluster",
       "description": "a Kafka Cluster groups multiple Kafka Brokers and manage topics",
       "typeVersion": "1.0",
+      "serviceType": "kafka",
       "attributeDefs": [
-        {
-          "name": "cluster.name",
-          "typeName": "string",
-          "isOptional": false,
-          "cardinality": "SINGLE",
-          "valuesMinCount": 1,
-          "valuesMaxCount": 1,
-          "isUnique": true,
-          "isIndexable": true
-        },
         {
           "name": "cluster.id",
           "typeName": "string",
-          "isOptional": false,
+          "isOptional": true,
           "cardinality": "SINGLE",
           "valuesMinCount": 0,
           "valuesMaxCount": 1,
@@ -73,7 +64,7 @@
         {
           "name": "bootstrap.server.internal",
           "typeName": "string",
-          "isOptional": false,
+          "isOptional": true,
           "cardinality": "SINGLE",
           "valuesMinCount": 0,
           "valuesMaxCount": 1,
@@ -83,7 +74,7 @@
         {
           "name": "bootstrap.server.external",
           "typeName": "string",
-          "isOptional": false,
+          "isOptional": true,
           "cardinality": "SINGLE",
           "valuesMinCount": 0,
           "valuesMaxCount": 1,
@@ -93,7 +84,7 @@
         {
           "name": "admin.ui",
           "typeName": "string",
-          "isOptional": false,
+          "isOptional": true,
           "cardinality": "SINGLE",
           "valuesMinCount": 0,
           "valuesMaxCount": 1,
@@ -103,7 +94,7 @@
         {
           "name": "replicas",
           "typeName": "int",
-          "isOptional": false,
+          "isOptional": true,
           "cardinality": "SINGLE",
           "valuesMinCount": 0,
           "valuesMaxCount": 1,
@@ -127,7 +118,7 @@
           "cardinality": "SINGLE",
           "valuesMinCount": 0,
           "valuesMaxCount": 1,
-          "isUnique": true,
+          "isUnique": false,
           "isIndexable": true
         },
         {
@@ -159,7 +150,21 @@
           "valuesMaxCount": 1,
           "isUnique": false,
           "isIndexable": false
-        }
+        },
+        {
+          "name": "brokers",
+          "typeName": "array<eda_kafka_broker>",
+          "isOptional": true,
+          "cardinality": "SET",
+          "valuesMinCount": 1,
+          "valuesMaxCount": 1000,
+          "isUnique": false,
+          "isComposite": true,
+          "isIndexable": false,
+          "includeInNotification": false,
+          "searchWeight": -1,
+          "relationshipTypeName": "eda_kafka_topic"
+      }
       ]
     }
   ]

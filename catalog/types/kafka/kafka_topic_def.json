@@ -2,10 +2,9 @@
     "entityDefs": [
         {
             "category": "ENTITY",
-            "version": 3,
             "name": "eda_kafka_topic",
-            "description": "kafka_topic",
-            "typeVersion": "2.7",
+            "description": "kafka_topic with configuration parameter",
+            "typeVersion": "1.0",
             "serviceType": "kafka",
             "superTypes": [
                 "DataSet"
@@ -47,6 +46,22 @@
                     "includeInNotification": false,
                     "searchWeight": 8
                 },
+                {
+                    "name": "cluster",
+                    "typeName": "eda_kafka_cluster",
+                    "isOptional": false,
+                    "cardinality": "SINGLE",
+                    "isUnique": false,
+                    "isIndexable": true
+                  },
+                  {
+                    "name": "clusterQualifiedName",
+                    "typeName": "string",
+                    "isOptional": false,
+                    "cardinality": "SINGLE",
+                    "isUnique": false,
+                    "isIndexable": true
+                  },
                 {
                     "name": "cleanup.policy",
                     "typeName": "string",
@@ -179,17 +194,6 @@
                     "isIndexable": false,
                     "includeInNotification": false,
                     "searchWeight": -1
-                },
-                {
-                    "name": "owner.cluster.references",
-                    "typeName": "array<eda_kafka_cluster>",
-                    "isOptional": true,
-                    "cardinality": "SET",
-                    "valuesMinCount": 0,
-                    "valuesMaxCount": 10,
-                    "isUnique": false,
-                    "isIndexable": false,
-                    "includeInNotification": false
                 }
                 
             ]

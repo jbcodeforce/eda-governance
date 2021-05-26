@@ -1,0 +1,34 @@
+{
+  "entities": [
+    {
+      "typeName": "eda_kafka_cluster",
+      "createdBy": "maas_service",
+      "attributes": {
+        "qualifiedName": "assets-arch-eda.lab-kafka",
+        "name": "lab-kafka",
+        "userDescription": "EDA team's Strimzi 2021 cluster",
+        "cluster.id": "WgA0ZtT7SxGIXJ75OiOWKg",
+        "cluster.type": "strimzi-023",
+        "cluster.purpose": "Run demo for EDA reference architecture assets",
+        "cluster.deployment.type": "OpenShift",
+        "cluster.deployment.environment": "on-premise",
+        "kafka.version": "2.7.0",
+        "owner": "Technical Go To Market",
+        "external.authentication.type": "scram-sha-512",
+        "internal.authentication.type": "plain",
+        "authorization.type": "simple",
+        "bootstrap.server.internal": "lab-kafka-kafka-bootstrap.kafka-strimzi.svc:9092",
+        "bootstrap.server.external": "lab-kafka-kafka-bootstrap-kafka-strimzi.apps.dooku.coc-ibm.com:443",
+        "replicas": 3,
+        "brokers": [
+          {"uniqueAttributes": {"qualifiedName": "lab-kafka-kafka-0@lab-kafka"}, 
+          "typeName": "eda_kafka_broker"},
+          {"uniqueAttributes": {"qualifiedName": "lab-kafka-kafka-1@lab-kafka"}, 
+          "typeName": "eda_kafka_broker"},
+          {"uniqueAttributes": {"qualifiedName": "lab-kafka-kafka-2@lab-kafka"}, 
+          "typeName": "eda_kafka_broker"}
+        ]
+      }
+    }
+  ]
+}
